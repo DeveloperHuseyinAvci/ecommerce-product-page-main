@@ -1,44 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/style/main.css" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
+    <title>E-commerce product page</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar-container">
+        <div class="nav-content-box-left">
+          <img src="/ecommerce-product-page-main/images/logo.svg" alt="logo" />
+          <ul class="nav-link-container">
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <img
+            class="media-nav-menu-icon"
+            style="display: none"
+            src="/ecommerce-product-page-main/images/icon-menu.svg"
+            alt="Menu İcon"
+          />
+        </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <div class="sidebar-container">
+          <img class="slidebar-close"
+            src="/ecommerce-product-page-main/images/icon-close.svg"
+            alt=""
+          />
+          <ul class="sidebar-content">
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+        <div class="nav-content-box-right">
+          <button class="nav-btn">
+            <img
+              src="../ecommerce-product-page-main/images/icon-cart.svg"
+              alt="Basket"
+            />
+            <p class="nav-basket-num">3</p>
+          </button>
+          <button class="nav-profile-photo">
+            <img
+              class="profile-photo"
+              src="/ecommerce-product-page-main/images/image-avatar.png"
+              alt="Avatar"
+            />
+          </button>
 
-  Sneaker Company
+          <div class="nav-card-container">
+            <h4 class="card-header">Card</h4>
+            <div class="nav-card-content" style="display: none">
+              <div class="card-img-write">
+                <img
+                  src="/ecommerce-product-page-main/images/image-product-1-thumbnail.jpg"
+                  alt="card-shoes"
+                />
+                <p class="account-container">
+                  Fall Limited Edition Sneakers $<span class="product-price"
+                    >125.00</span
+                  >x<span class="number-product">3</span>
+                  <strong class="product-total">375.00</strong>
+                </p>
+                <button class="nav-card-delete-btn btn-delete">
+                  <i class="far fa-trash-alt"></i>
+                </button>
+              </div>
+              <button class="nav-card-check-btn btn-check">Checkout</button>
+            </div>
+            <p class="blank-card">Your cart is empty.</p>
+          </div>
+        </div>
+      </nav>
 
-  Fall Limited Edition Sneakers
+      <main class="main-container">
+        <!-- **************************** -->
+        <div class="click-img-container"></div>
+        <div class="click-img-content-all" style="display: none">
+          <div class="click-img-content-up">
+            <i class="far fa-window-close"></i>
+            <button class="click-icon click-prev">
+              <i class="fas fa-angle-left"></i>
+            </button>
+            <img
+              class="click-img-up"
+              src="/ecommerce-product-page-main/images/image-product-1.jpg"
+              alt="Shoes1"
+            />
+            <img
+              class="click-img-up"
+              src="/ecommerce-product-page-main/images/image-product-2.jpg"
+              alt="Shoes2"
+            />
+            <img
+              class="click-img-up"
+              src="/ecommerce-product-page-main/images/image-product-3.jpg"
+              alt="Shoes3"
+            />
+            <img
+              class="click-img-up"
+              src="/ecommerce-product-page-main/images/image-product-4.jpg"
+              alt="Shoes4"
+            />
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+            <button class="click-icon click-next">
+              <i class="fas fa-angle-right"></i>
+            </button>
+          </div>
 
-  $125.00
-  50%
-  $250.00
+          <div class="click-img-content-down">
+            <img
+              class="click-img-down"
+              src="/ecommerce-product-page-main/images/image-product-1-thumbnail.jpg"
+              alt="Shoes Small 1"
+            />
+            <img
+              class="click-img-down"
+              src="/ecommerce-product-page-main/images/image-product-2-thumbnail.jpg"
+              alt="Shoes Small 2"
+            />
+            <img
+              class="click-img-down"
+              src="/ecommerce-product-page-main/images/image-product-3-thumbnail.jpg"
+              alt="Shoes Small 3"
+            />
+            <img
+              class="click-img-down"
+              src="/ecommerce-product-page-main/images/image-product-4-thumbnail.jpg"
+              alt="Shoes Small 4"
+            />
+          </div>
+        </div>
 
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <!-- **************************** -->
+
+        <div class="img-container">
+          <button
+            class="icon-next-previous media-icon-previous"
+            style="display: none"
+          >
+            <img
+              src="/ecommerce-product-page-main/images/icon-previous.svg"
+              alt="icon-previous"
+            />
+          </button>
+          <div class="img-content-up">
+            <img
+              class="img-up"
+              src="/ecommerce-product-page-main/images/image-product-1.jpg"
+              alt="Shoes1"
+            />
+            <img
+              class="img-up"
+              style="display: none"
+              src="/ecommerce-product-page-main/images/image-product-2.jpg"
+              alt="Shoes2"
+            />
+            <img
+              class="img-up"
+              style="display: none"
+              src="/ecommerce-product-page-main/images/image-product-3.jpg"
+              alt="Shoes3"
+            />
+            <img
+              class="img-up"
+              style="display: none"
+              src="/ecommerce-product-page-main/images/image-product-4.jpg"
+              alt="Shoes4"
+            />
+          </div>
+          <div class="img-content-down">
+            <img
+              class="img-down"
+              src="/ecommerce-product-page-main/images/image-product-1-thumbnail.jpg"
+              alt="Shoes Small 1"
+            />
+            <img
+              class="img-down"
+              src="/ecommerce-product-page-main/images/image-product-2-thumbnail.jpg"
+              alt="Shoes Small 2"
+            />
+            <img
+              class="img-down"
+              src="/ecommerce-product-page-main/images/image-product-3-thumbnail.jpg"
+              alt="Shoes Small 3"
+            />
+            <img
+              class="img-down"
+              src="/ecommerce-product-page-main/images/image-product-4-thumbnail.jpg"
+              alt="Shoes Small 4"
+            />
+          </div>
+          <button
+            class="icon-next-previous media-icon-next"
+            style="display: none"
+          >
+            <img
+              src="/ecommerce-product-page-main/images/icon-next.svg"
+              alt="media-icon-next"
+            />
+          </button>
+        </div>
+
+        <div class="menu-operation-container">
+          <h3>Sneaker Company</h3>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+
+          <div class="numbers-container">
+            <strong class="price">$125.00</strong>
+            <small class="discount">50%</small>
+            <p class="previous-price">$250.00</p>
+          </div>
+
+          <div class="main-btn-container">
+            <div class="main-btn-content-left">
+              <button class="box-btn btn-min">
+                <img
+                  src="/ecommerce-product-page-main/images/icon-minus.svg"
+                  alt="minus"
+                />
+              </button>
+              <p class="number-shoes">3</p>
+              <button class="box-btn btn-max">
+                <img
+                  src="/ecommerce-product-page-main/images/icon-plus.svg"
+                  alt="plus"
+                />
+              </button>
+            </div>
+            <button class="box-btn btn-right">
+              <i class="fas fa-shopping-basket"></i>
+              <p style="color: white; margin-left: 10px">Add to cart</p>
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://www.linkedin.com/in/huseyin-avci-11416a206/"
+        target="_blank"
+        >Huseyin Avci</a
+      >.
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
 </html>

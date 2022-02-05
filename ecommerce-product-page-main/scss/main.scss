@@ -1,0 +1,334 @@
+@import "_navbar";
+@import "_veriables";
+
+* {
+  box-sizing: border-box;
+  /* outline: 1px solid gainsboro; */
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-ubuntu;
+  height: 100vh;
+  position: relative;
+  background-color: $Light-grayish-blue;
+}
+.container {
+  @include flexible-column-center;
+  width: 100%;
+}
+
+.main-container {
+  @include flexible-row-space-around;
+  margin-top: 3%;
+  width: 90%;
+
+  .img-container {
+    @include flexible-column-space-around;
+    width: 35%;
+    height: 70vh;
+
+    .img-content-up {
+      img {
+        height: 55vh;
+        border-radius: 15px;
+        box-shadow: 0px 10px 10px -10px gray;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+    .img-content-down {
+      @include flexible-row-space-around;
+      width: 90%;
+
+      img {
+        box-shadow: 0px 10px 10px -10px gray;
+        border-radius: 5px;
+        height: 10vh;
+        transition: all ease-in-out 0.2s;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.5;
+        }
+        &:active {
+          border: 3px solid $Orange;
+        }
+      }
+    }
+  }
+
+  .menu-operation-container {
+    width: 35%;
+    h3 {
+      color: $Orange;
+    }
+    h1 {
+      color: $Very-vark-blue;
+    }
+    p {
+      color: $Dark-grayish-blue;
+    }
+    .numbers-container {
+      strong {
+        font-size: 1.3rem;
+        font-weight: 900;
+      }
+      small {
+        background-color: $Pale-orange;
+        color: $Orange;
+        font-weight: 600;
+        margin-left: 5px;
+        border-radius: 5px;
+        padding: 4px;
+      }
+      p {
+        text-decoration: line-through;
+      }
+    }
+
+    .main-btn-container {
+      @include flexible-row-space;
+      .main-btn-content-left {
+        @include flexible-row-space;
+        border-radius: 5px;
+        width: 30%;
+        height: 7vh;
+        background-color: $Light-grayish-blue;
+        .box-btn {
+          background: none;
+          border: none;
+          outline: none;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        p {
+          font-weight: 900;
+          color: black;
+        }
+      }
+      .btn-right {
+        @include flexible-row-center;
+        width: 65%;
+        height: 6.5vh;
+        border-radius: 5px;
+        background-color: $Orange;
+        border: none;
+        outline: none;
+        color: $White-color;
+        font-weight: 600;
+        transition: all ease-in-out 0.2s;
+        box-shadow: 0px 15px 20px -10px $Orange;
+        &:hover {
+          opacity: 0.7;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  /* *****************İmg Active********************** */
+  .click-img-container {
+    display: none;   /* display None  */
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: black;
+    opacity: 0.6;
+  }
+  .click-img-content-all {
+    @include flexible-column-center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    .click-img-content-up {
+      @include flexible-column-center;
+      width: 30%;
+      height: 60%;
+      position: relative;
+      img {
+        position: absolute;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+      }
+      .click-icon {
+        position: absolute;
+        z-index: 10;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        i {
+          font-size: 1.5rem;
+          color: $Dark-grayish-blue;
+        }
+        &:active i {
+          color: $Orange;
+          font-size: 1.4rem;
+        }
+      }
+      .click-next {
+        right: -25px;
+      }
+      .click-prev {
+        left: -25px;
+      }
+      .fa-window-close {
+        position: absolute;
+        top: -35px;
+        right: 0;
+        z-index: 10;
+        font-size: 2rem;
+        color: $Light-grayish-blue;
+        cursor: pointer;
+
+        &:active {
+          font-size: 1.9rem;
+          color: $Orange;
+        }
+      }
+    }
+    .click-img-content-down {
+      @include flexible-row-space-around;
+      width: 30%;
+      margin-top: 10px;
+      img {
+        border-radius: 10px;
+        height: 75px;
+        &:hover {
+          filter: blur(2px);
+        }
+        &:active {
+          border: 3px solid $Orange;
+        }
+      }
+    }
+  }
+}
+/* *****************İmg Active********************** */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 3%;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+/* mobile */
+
+@media (max-width:480px){
+  .main-container {
+    width: 100%;
+    margin-top: 0;
+    @include flexible-column-center;
+    .img-container {
+      width: 100%;
+      height: 47vh;
+      .img-content-up {
+        width: 100%;
+        img {
+          border-radius: 0;
+          box-shadow: none;
+          width: 100%;
+          height: 45vh;
+        }
+      }
+      .img-content-down {
+        display: none;
+      }
+      .icon-next-previous {
+        display: block !important;
+        border: none;
+        outline: none;
+        position: absolute;
+        padding: 15px;
+        border-radius: 100%;
+        background-color: $Light-grayish-blue;
+        &:active {
+          background-color: $Grayish-blue;
+        }
+      }
+      .media-icon-next {
+        right: 4%;
+      }
+      .media-icon-previous {
+        left: 4%;
+      }
+    }
+
+    .menu-operation-container {
+      width: 80%;
+      .numbers-container {
+        @include flexible-row-center;
+        small {
+          margin-right: 40%;
+        }
+      }
+      .main-btn-container {
+        @include flexible-column-center;
+        .main-btn-content-left {
+          width: 100%;
+          margin-top: 10%;
+        }
+        .btn-right {
+          width: 100%;
+          margin-top: 5%;
+        }
+      }
+    }
+    .click-img-container {
+      display: none;
+    }
+    .click-img-content-all {
+      display: none;
+    }
+    .click-img-container {
+      display: none;  /* bu kodu sidebar ile aynı anda entegre et*/
+      z-index: 10;
+    }
+  }
+  .attribution {
+    margin-top: 10%;
+  }
+}
+
+@media (min-width: 481px) and (max-width:768px){
+  .main-container{
+   width: 100%;
+    .img-container{
+      width: 50%;
+      height: 90vh;
+      .img-content-up{
+        img{
+          height: 70vh;
+        }
+      }
+    }
+  }
+} 
+
+@media (min-width: 769px) and (max-width:1024px){
+  .main-container{
+    .img-container{
+      width: 40%;
+      height: 90vh;
+      .img-content-up{
+        img{
+          height: 70vh;
+        }
+      }
+    }
+
+    .click-img-content-all{
+      .click-img-content-down{
+        width: 40%;
+      }
+    }
+  }
+} 

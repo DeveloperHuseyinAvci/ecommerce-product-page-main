@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+$Orange: hsl(26, 100%, 55%);
+$Pale-orange: hsl(25, 100%, 94%);
+$Very-vark-blue: hsl(220, 13%, 13%);
+$Dark-grayish-blue: hsl(219, 9%, 45%);
+$Grayish-blue: hsl(220, 14%, 75%);
+$Light-grayish-blue: hsl(223, 64%, 98%);
+$White-color: hsl(0, 0%, 100%);
+$Black-with: hsl(0, 0%, 0%);/* Black (with 75% opacity for lightbox background) */
+$Size-paragraph: 16px;
+$font-ubuntu: 'Ubuntu', sans-serif;
+
+@mixin flexible-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin  flexible-row-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexible-row-flow {
+    display: flex;
+    flex-direction: row;
+}
+@mixin flexible-column-flow {
+        display: flex;
+        flex-direction: column;
+}
+@mixin flexible-row-space {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flexible-row-space-around {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+}
+@mixin flexible-column-space-around  {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+}
